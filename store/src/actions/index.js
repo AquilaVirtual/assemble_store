@@ -9,7 +9,6 @@ export const loadProducts = () => {
         payload: data
     }
 }
-
 export const addToCart = (product) => {
     return {
         type: ADD_TO_CART,

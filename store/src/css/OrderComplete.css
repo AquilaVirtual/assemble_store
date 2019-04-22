@@ -1,20 +1,18 @@
 .order-complete {
-    position: absolute;
-    margin-top: 3rem;
-    font-size: 1.2rem;
-    font-weight: 600;
-    border-bottom: 1px solid darkgray;
-    width: 56%;
-    color: #7b7171;
-    padding-bottom: 0.3rem;
-    display: flex;
+  position: absolute;
+  margin-top: 3rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-bottom: 1px solid darkgray;
+  width: 56%;
+  color: #7b7171;
+  padding-bottom: 0.3rem;
+  display: flex;
 }
-
 .body-section {
-    margin-top: 10rem;
+  margin-top: 10rem;
 }
-
 .section-text {
-    margin-bottom: 2rem;
-    font-size: 1.1rem;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
 }

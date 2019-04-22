@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import {NavLink } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 
 import { connect } from "react-redux";
 
-import "../css/Checkout.css"
+import "../css/Checkout.css";
 
 class Checkout extends Component {
   render() {
@@ -33,9 +33,8 @@ class Checkout extends Component {
     }
 
     let totalOrder = this.props.products.reduce(function(prev, cur) {
-        return prev + cur.selectedProduct.unitPrice;
-      }, 0);
-
+      return prev + cur.selectedProduct.unitPrice;
+    }, 0);
 
     let compressedArray = compressArray(this.props.products);
 
@@ -61,7 +60,7 @@ class Checkout extends Component {
             </td>
             <td>{product.count}</td>
             <td>${product.value.selectedProduct.unitPrice * product.count}</td>
-          </tr>    
+          </tr>
         </tbody>
       );
     });
@@ -81,12 +80,18 @@ class Checkout extends Component {
                   </tr>
                 </thead>
                 {items}
-         <span className="footer"><span>Subtotal</span> <span className="total">${totalOrder}</span></span>
+                <span className="footer">
+                  <span>Subtotal</span>{" "}
+                  <span className="total">${totalOrder}</span>
+                </span>
               </table>
               <NavLink to="/order">
-              <button className="btn btn-primary checkout" style={{ float: "right" }}>
-                check out
-              </button>
+                <button
+                  className="btn btn-primary checkout"
+                  style={{ float: "right" }}
+                >
+                  check out
+                </button>
               </NavLink>
             </div>
           ) : (

@@ -1,8 +1,7 @@
 .card {
-    width: 300px;
-    margin: 10px;
+  width: 300px;
+  margin: 10px;
 }
-
 span:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
