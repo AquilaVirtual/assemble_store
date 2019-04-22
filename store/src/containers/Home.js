@@ -4,7 +4,6 @@ import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 
 import ProductList from "../components/ProductList";
-import Cart from "./Cart";
 
 class Home extends Component {
   componentDidMount = () => {
@@ -21,10 +20,7 @@ class Home extends Component {
                 this.props.actions.addToCart({ selectedProduct })
               }
             />
-          </div>
-          <div className="col-1">
-            <Cart products={this.props.selectedProduct} />
-          </div>
+          </div>        
         </div>
       </div>
     );
