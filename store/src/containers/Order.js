@@ -88,7 +88,9 @@ class Order extends Component {
                 </label>
               </div>
             </div>
+            <NavLink to="/complete">
             <button type="submit" className="btn btn-primary">PLACE ORDER</button>
+            </NavLink>
             </div>
                  </div>
                  </div>
