@@ -2,6 +2,12 @@
   width: 300px;
   margin: 10px;
 }
+
+img:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
 span:hover {
   cursor: pointer;
 }
