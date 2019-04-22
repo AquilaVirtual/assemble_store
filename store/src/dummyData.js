@@ -1,9 +1,9 @@
 
-  export const data = [{ sku: 38094374, unitPrice: 24.0, name: "Vintage Camera", url: "https://picsum.photos/id/250/4928/3264"}, 
-  { sku: 38094375, unitPrice: 24.0, name: "Ladies Shoes", url: "https://picsum.photos/id/21/3008/2008"}, 
-  { sku: 38094321, unitPrice: 12.0, name: "Acoustic Guitar", url: "https://picsum.photos/id/145/4288/2848"},
-{ sku: 38094374, unitPrice: 24.0, name: "Vintage Bicycle", url: "https://picsum.photos/id/146/5184/3456"}, 
-  { sku: 38094375, unitPrice: 24.0, name: "Apple Mac", url: "https://picsum.photos/id/119/3264/2176"}, 
+  export const data = [{ sku: 38094377, unitPrice: 184.0, name: "Vintage Camera", url: "https://picsum.photos/id/250/4928/3264"}, 
+  { sku: 38094375, unitPrice: 80.0, name: "Ladies Shoes", url: "https://picsum.photos/id/21/3008/2008"}, 
+  { sku: 38094322, unitPrice: 120.0, name: "Acoustic Guitar", url: "https://picsum.photos/id/145/4288/2848"},
+{ sku: 38094374, unitPrice: 84.0, name: "Vintage Bicycle", url: "https://picsum.photos/id/146/5184/3456"}, 
+  { sku: 38094373, unitPrice: 224.0, name: "Apple Mac", url: "https://picsum.photos/id/119/3264/2176"}, 
   { sku: 38094321, unitPrice: 12.0, name: "Strawberries fruits", url: "https://picsum.photos/id/1080/6858/4574"}
 ]
 
