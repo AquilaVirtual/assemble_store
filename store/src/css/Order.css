@@ -1,0 +1,20 @@
+.ctn {
+    position: absolute;
+    left: 58%;
+    top: 32rem;
+}
+
+.order-container {
+    margin-top: 6rem;
+}
+
+.Header {
+    position: absolute;
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #7b7171;
+    border-bottom: 1px solid;
+    width: 39%;
+    display: flex;
+}

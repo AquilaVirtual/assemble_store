@@ -5,6 +5,7 @@ import '../App.css';
 import Home from '../containers/Home';
 import Checkout from '../containers/Checkout';
 import Navbar from '../containers/Navbar';
+import Order from '../containers/Order';
 
 class App extends Component {
   render() {
@@ -13,6 +14,7 @@ class App extends Component {
         <Navbar />
         <Route exact path="/" component={Home} />
         <Route path="/checkout" component={Checkout} />
+        <Route path="/order" component={Order} />
       </div>
     );
   }
