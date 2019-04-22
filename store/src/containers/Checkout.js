@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
+import "../css/Checkout.css"
+
 class Checkout extends Component {
   render() {
-      //compressArray arranges selected products in an array. 
-      // When a shopper adds more than one quatity of the same product (duplicates), 
-      //this creates an object and puts the item and count in it.
+    //compressArray arranges selected products in an array.
+    // When a shopper adds more than one quatity of the same product (duplicates),
+    //this creates an object and puts the item and count in it.
     function compressArray(original) {
       let compressed = [];
       let copy = original.slice(0);
@@ -27,7 +29,14 @@ class Checkout extends Component {
 
       return compressed;
     }
+
+    let totalOrder = this.props.products.reduce(function(prev, cur) {
+        return prev + cur.selectedProduct.unitPrice;
+      }, 0);
+
+
     let compressedArray = compressArray(this.props.products);
+
     const items = compressedArray.map((product, i) => {
       return (
         <tbody key={i}>
@@ -39,6 +48,7 @@ class Checkout extends Component {
                 width="140"
                 height="100"
                 alt="..."
+                style={{ borderRadius: "24%" }}
               />
             </td>
             <td>
@@ -49,7 +59,7 @@ class Checkout extends Component {
             </td>
             <td>{product.count}</td>
             <td>${product.value.selectedProduct.unitPrice * product.count}</td>
-          </tr>
+          </tr>    
         </tbody>
       );
     });
@@ -69,8 +79,9 @@ class Checkout extends Component {
                   </tr>
                 </thead>
                 {items}
+         <span className="footer"><span>Subtotal</span> <span className="total">${totalOrder}</span></span>
               </table>
-              <button className="btn btn-primary" style={{ float: "right" }}>
+              <button className="btn btn-primary checkout" style={{ float: "right" }}>
                 check out
               </button>
             </div>
