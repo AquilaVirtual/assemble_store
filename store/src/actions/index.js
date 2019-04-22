@@ -1,4 +1,4 @@
-import { PRODUCTS } from '../constants/constants';
+import { PRODUCTS, ADD_TO_CART } from '../constants/constants';
 
 import { data } from  '../dummyData';
 
@@ -10,5 +10,11 @@ export const loadProducts = () => {
     }
 }
 
+export const addToCart = (product) => {
+    return {
+        type: ADD_TO_CART,
+        payload: product
+    }
 
+}
 
