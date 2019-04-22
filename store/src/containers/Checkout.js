@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import {NavLink } from 'react-router-dom';
+
 import { connect } from "react-redux";
 
 import "../css/Checkout.css"
@@ -81,9 +83,11 @@ class Checkout extends Component {
                 {items}
          <span className="footer"><span>Subtotal</span> <span className="total">${totalOrder}</span></span>
               </table>
+              <NavLink to="/order">
               <button className="btn btn-primary checkout" style={{ float: "right" }}>
                 check out
               </button>
+              </NavLink>
             </div>
           ) : (
             <div style={{ marginTop: "40px" }}>
