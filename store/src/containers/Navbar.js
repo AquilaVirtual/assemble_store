@@ -14,7 +14,7 @@ class Navbar extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    console.log('A name was submitted: ' + this.input.current.value);
+    this.props.actions.searchProducts(this.input.current.value.trim())
     this.input.current.value = ""
   };
   render() {
