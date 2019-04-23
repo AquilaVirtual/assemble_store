@@ -6,7 +6,7 @@ import searchProductsReducer from "./searchProducts"
 const rootReducer = combineReducers({
   products: productsReducer,
   product: addToCartReducer,
-  searchProducts: searchProductsReducer
+  searchResults: searchProductsReducer
 });
 
 export default rootReducer;
