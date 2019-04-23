@@ -14,9 +14,9 @@ class Navbar extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    this.props.actions.searchProducts(this.input.current.value.trim())
-    this.input.current.value = ""
-    this.props.history.push("/results")
+    this.props.actions.searchProducts(this.input.current.value.trim());
+    this.input.current.value = "";
+    this.props.history.push("/results");
   };
   render() {
     return (
