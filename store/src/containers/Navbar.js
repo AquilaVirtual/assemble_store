@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, withRouter } from "react-router-dom";
 
 import * as Actions from "../actions";
 import { bindActionCreators } from "redux";
@@ -14,8 +14,9 @@ class Navbar extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    this.props.actions.searchProducts(this.input.current.value.trim())
-    this.input.current.value = ""
+    this.props.actions.searchProducts(this.input.current.value.trim());
+    this.input.current.value = "";
+    this.props.history.push("/results");
   };
   render() {
     return (
@@ -68,4 +69,4 @@ const mapDispatchToAction = dispatch => {
 export default connect(
   null,
   mapDispatchToAction
-)(Navbar);
+)(withRouter(Navbar));
