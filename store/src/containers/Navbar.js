@@ -11,6 +11,12 @@ class Navbar extends Component {
     super();
     this.input = React.createRef();
   }
+
+  handleSubmit = event => {
+    event.preventDefault();
+    console.log('A name was submitted: ' + this.input.current.value);
+    this.input.current.value = ""
+  };
   render() {
     return (
       <nav className="navbar navbar-expand-lg navbar-light">
@@ -30,17 +36,21 @@ class Navbar extends Component {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto" />
-          <form className="form-inline my-2 my-lg-0">
+          <form
+            className="form-inline my-2 my-lg-0"
+            onSubmit={this.handleSubmit}
+          >
             <input
               className="form-control mr-sm-2"
               type="search"
               placeholder="Search for products"
               aria-label="Search"
+              ref={this.input}
             />
             <button
               className="btn btn-outline-success my-2 my-sm-0"
               type="submit"
-           onClick={this.handleSearch} >
+            >
               Search
             </button>
           </form>
@@ -50,15 +60,12 @@ class Navbar extends Component {
   }
 }
 
-
 const mapDispatchToAction = dispatch => {
-    return {
-      actions: bindActionCreators(Actions, dispatch)
-    };
+  return {
+    actions: bindActionCreators(Actions, dispatch)
   };
-  export default connect(
-    null,
-    mapDispatchToAction
-  )(Navbar);
-  
-
+};
+export default connect(
+  null,
+  mapDispatchToAction
+)(Navbar);
