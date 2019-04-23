@@ -1,4 +1,4 @@
-import { PRODUCTS, ADD_TO_CART, CLEAR_CART  } from '../constants/constants';
+import { PRODUCTS, ADD_TO_CART, CLEAR_CART, SEARCH_PRODUCTS  } from '../constants/constants';
 
 import { data } from  '../dummyData';
 
@@ -14,11 +14,20 @@ export const addToCart = (product) => {
         type: ADD_TO_CART,
         payload: product
     }
-
 }
 export const clearCart = () => {
     return {
         type: CLEAR_CART,     
+    }
+
+}
+export const searchProducts = (searchTerm) => {
+    const results = data.filter(product => {
+        return product.name.toString().toLocaleLowerCase() === searchTerm.toString().toLocaleLowerCase()
+    })  
+    return {
+        type: SEARCH_PRODUCTS, 
+        payload: results    
     }
 
 }
