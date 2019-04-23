@@ -6,7 +6,7 @@ import Home from '../containers/Home';
 import Checkout from '../containers/Checkout';
 import Navbar from '../containers/Navbar';
 import Order from '../containers/Order';
-import SearchResults from './SearchResults';
+import SearchResults from '../containers/SearchResults';
 import OrderComplete from '../containers/OrderComplete';
 
 class App extends Component {

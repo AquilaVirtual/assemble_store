@@ -4,7 +4,7 @@ import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 
 import ProductList from "../components/ProductList";
-import Cart from "../containers/Cart";
+import Cart from "./Cart";
 
 class searchResults extends Component {
   render() {
