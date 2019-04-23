@@ -1,4 +1,4 @@
-import { PRODUCTS, ADD_TO_CART } from '../constants/constants';
+import { PRODUCTS, ADD_TO_CART, CLEAR_CART  } from '../constants/constants';
 
 import { data } from  '../dummyData';
 
@@ -16,4 +16,12 @@ export const addToCart = (product) => {
     }
 
 }
+export const clearCart = () => {
+    return {
+        type: CLEAR_CART,     
+    }
+
+}
+
+
 
