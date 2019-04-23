@@ -28,14 +28,13 @@ class Checkout extends Component {
           compressed.push(a);
         }
       }
-
       return compressed;
     }
-
+    //Here we handle subtotal of order
     let totalOrder = this.props.products.reduce(function(prev, cur) {
       return prev + cur.selectedProduct.unitPrice;
     }, 0);
-
+    //Invoke compressArray before mapping over orders
     let compressedArray = compressArray(this.props.products);
 
     const items = compressedArray.map((product, i) => {
@@ -59,6 +58,7 @@ class Checkout extends Component {
               </div>
             </td>
             <td>{product.count}</td>
+            {/* Here we multiply number of quantity by price in each row */}
             <td>${product.value.selectedProduct.unitPrice * product.count}</td>
           </tr>
         </tbody>

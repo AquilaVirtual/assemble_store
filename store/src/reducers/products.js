@@ -6,7 +6,6 @@ const initialState = {
 export default function productsReducer(state = initialState, action) {
   switch (action.type) {
     case PRODUCTS:
-      console.log("IN products reducers", state);
       return {
         ...state,
         data: action.payload
