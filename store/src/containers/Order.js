@@ -17,11 +17,11 @@ class Order extends Component {
             <div className="col-6">
               <form>
                 <div className="form-group">
-                  <label htmlFor="inputAddress">Name on Card</label>
+                  <label htmlFor="name">Name on Card</label>
                   <input
                     type="text"
                     className="form-control"
-                    id="inputAddress"
+                    id="name"
                     placeholder="Name on Card"
                   />
                 </div>
@@ -66,20 +66,20 @@ class Order extends Component {
               <form>
                 <div className="form-row">
                   <div className="form-group col-md-6">
-                    <label htmlFor="inputEmail4">First Name</label>
+                    <label htmlFor="firstName">First Name</label>
                     <input
                       type="email"
                       className="form-control"
-                      id="inputEmail4"
+                      id="firstName"
                       placeholder="First Name"
                     />
                   </div>
                   <div className="form-group col-md-6">
-                    <label htmlFor="inputPassword4">Last Name</label>
+                    <label htmlFor="lastName">Last Name</label>
                     <input
-                      type="password"
+                      type="text"
                       className="form-control"
-                      id="inputPassword4"
+                      id="lastName"
                       placeholder="Last Name"
                     />
                   </div>
